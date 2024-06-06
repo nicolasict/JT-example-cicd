@@ -1,6 +1,12 @@
 version: '3'
 services:
-  web:
+  nginx:
     build:
       context: ./webserver
       dockerfile: Dockerfile
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run --token eyJhIjoiZDVlMjY0Yjk0YWY1NDIwMGUyZGMyMzYwYWZlNzEwYTQiLCJ0IjoiMGI3MDUzNDQtZDkzZS00ZDBlLWJiODQtODM4ODVkMjg2NTZjIiwicyI6Ik1UZGpOek5oTW1FdFlUWTFNeTAwWW1JMExUZ3dNVEl0WlRWbU5XSm1Oelk1T0ROaCJ9
+    stdin_open: true
+    tty: true
