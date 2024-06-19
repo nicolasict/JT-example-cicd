@@ -4,7 +4,7 @@ services:
     build:
       context: ./webserver
       dockerfile: Dockerfile
-    image: myapp:${RENDOM}
+    #image: myapp:${RENDOM}
   
   tunnel:
     image: cloudflare/cloudflared:latest
