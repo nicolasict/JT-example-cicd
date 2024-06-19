@@ -1,10 +1,10 @@
-version: '3'
+version: '3.2'
 services:
   nginx:
     build:
       context: ./webserver
       dockerfile: Dockerfile
-    image: myapp:${RANDOM_NAME}
+    image: myapp:${RENDOM}
   
   tunnel:
     image: cloudflare/cloudflared:latest
